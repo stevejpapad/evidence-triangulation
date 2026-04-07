@@ -1,13 +1,21 @@
-# Supplementary Material: Evidence Triangulation for Multimodal Fact-Checking in the Wild 
+# Evidence Triangulation for Multimodal Fact-Checking in the Wild 
 
-This package provides the source code for the **TRENT** architecture and the **X-POSE** dataset. 
+Repository for the paper "Evidence Triangulation for Multimodal Fact-Checking in the Wild".
+Contains the source code for the **TRENT** architecture and the construction of the **X-POSE** dataset. 
+
+## Abstract
+>*The proliferation of multimedia content on social platforms has fueled multimodal misinformation, where images are used to reinforce false claims. Consequently, Multimodal Fact-Checking (MFC) has emerged as a critical research area. However, current progress is hindered by a reliance on synthetic training datasets that fail to capture the linguistic and visual complexity of in-the-wild posts, as well as detection models limited to intra-modality consistency or generic all-to-all fusion, which fail to capture nuanced relations between posts and external evidence. To address this, we introduce X-POSE, a dataset of real-world, community-annotated multimodal posts from X (formerly Twitter), augmented with full-length news articles as external evidence retrieved by VLM-optimized search and refined through VLM-based excerpt extraction. Additionally, we propose TRENT, a novel MFC model that performs evidence triangulation using three parallel cross-attention streams (text-evidence, image-evidence, and image-text alignment) and a relational fusion mechanism that explicitly models entailment and contradiction. Extensive evaluations demonstrate that TRENT trained on X-POSE consistently outperforms state-of-the-art MFC models and commercial VLMs.*
+
+![Screenshot](docs/fig1.png)
+
+![Screenshot](docs/fig2.png)
 
 ## Contents
 - `scripts/`: Data and evidence collection scripts. 
 - `src/`: Core implementation (Model architecture, Dataset handling, Training/Evaluation).
 - `data/`: The X-POSE dataset (Post IDs, Labels, and Metadata) and the processed outputs from the VLM (e.g., extracted evidence excerpts).
   
-**NOTE**: In compliance with GDPR, platform Terms of Service, and Copyright Law, original images and raw article text are excluded from this supplementary archive. Sections of the pipeline requiring these restricted assets are denoted as `INTERNAL` within the codebase.
+**NOTE**: In compliance with GDPR, platform Terms of Service, and Copyright Law, original images and raw article text not provided. Sections of the pipeline requiring these restricted assets are denoted as `INTERNAL` within the codebase.
 
 ## Data & Prompts
 - **Community Notes Data:** Ratings used for Sections 4.1 and 4.4 were accessed via the [X Community Notes Data Portal](https://x.com/i/communitynotes/download-data).
@@ -88,3 +96,12 @@ for lr in [1e-4, 5e-5]:
                 learning_rate=lr, 
                 TRAIN_MODEL=True)
 ```
+
+## Acknowledgements
+This work is partially funded by the projects "vera.ai: VERification Assisted by Artificial Intelligence" under grant agreement no. 101070093, and "AI4TRUST - AI-based-technologies for trustworthy solutions against disinformation" under grant agreement no. 101070190. 
+
+## Licence
+This project is licensed under the Apache License 2.0 - see the [LICENSE](https://github.com/stevejpapad/evidence-triangulation/blob/main/LICENSE) file for more details.
+
+## Contact
+Stefanos-Iordanis Papadopoulos (stefpapad@iti.gr)
