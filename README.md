@@ -1,10 +1,12 @@
 # Evidence Triangulation for Multimodal Fact-Checking in the Wild 
 
-Repository for the paper "Evidence Triangulation for Multimodal Fact-Checking in the Wild".
-Contains the source code for the **TRENT** architecture and the construction of the **X-POSE** dataset. 
+Repository for "Evidence Triangulation for Multimodal Fact-Checking in the Wild", accepted at the **European Conference on Computer Vision (ECCV 2026)**. 
+Contains code for the **TRENT** architecture and the construction of the **X-POSE** dataset. 
 
-The **X-POSE** dataset (claims, images, data splits, full articles, extracted excerpts) can be accessed through [Hugging Face](https://huggingface.co/datasets/stefpapad/X-POSE).
-*NOTE: Access requires an official academic or research institution email address for verification purposes.*
+📄 **Pre-print** available at [arXiv:2606.31367](https://arxiv.org/abs/2606.31367).  
+
+🤗 The **X-POSE** dataset (claims, images, data splits, full articles, extracted excerpts) can be accessed through [Hugging Face](https://huggingface.co/datasets/stefpapad/X-POSE). \
+*NOTE: An official academic or research institution email address is required for verification.*
 
 ## Abstract
 >*The proliferation of multimedia content on social platforms has fueled multimodal misinformation, where images are used to reinforce false claims. Consequently, Multimodal Fact-Checking (MFC) has emerged as an increasingly important research area. However, current progress is hindered by a reliance on synthetic training data and curated benchmarks that fail to capture the complexity of in-the-wild data. Furthermore, existing detection models rely on restricted intra-modality consistency or unconstrained all-to-all fusion, failing to capture nuanced relations between posts and external evidence. To address these limitations, we introduce X-POSE, a benchmark of real-world, community-annotated multimodal posts from X (formerly Twitter), augmented with full-length news articles retrieved via VLM-optimized search. Additionally, we propose TRENT, a novel MFC model that performs evidence triangulation using three parallel cross-attention streams alongside a relational fusion mechanism that explicitly models entailment and contradiction. Extensive evaluations demonstrate that TRENT consistently outperforms state-of-the-art specialized models and commercial VLMs.*
@@ -101,7 +103,7 @@ for lr in [1e-4, 5e-5]:
 ```
 
 ## Acknowledgements
-This work is partially funded by the projects "vera.ai: VERification Assisted by Artificial Intelligence" under grant agreement no. 101070093, and "AI4TRUST - AI-based-technologies for trustworthy solutions against disinformation" under grant agreement no. 101070190. 
+This work is partially funded by Horizon Europe projects AI-CODE and ELLIOT under grant agreement no. 101135437 and 101214398, respectively. 
 
 ## Licence
 This project is licensed under the Apache License 2.0 - see the [LICENSE](https://github.com/stevejpapad/evidence-triangulation/blob/main/LICENSE) file for more details.
